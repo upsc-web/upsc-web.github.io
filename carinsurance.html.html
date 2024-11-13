@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Insurance Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: hsl(0, 0%, 96%);
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+            padding: 10px 0;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Insurance Basics</h1>
+        <nav>
+            <ul>
+                <li><a href="#what-is-car-insurance">What is Car Insurance?</a></li>
+                <li><a href="#types-of-coverage">Types of Coverage</a></li>
+                <li><a href="#how-to-choose">How to Choose a Policy</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="what-is-car-insurance" onclick="toggleContent('content1')">What is Car Insurance?</h2>
+        <div id="content1" class="content">
+            <p>Car insurance is a contract between you and an insurance company that provides financial protection in case of accidents, theft, or damage to your vehicle. It helps cover costs related to injuries, vehicle repairs, and legal fees.</p>
+        </div>
+
+        <h2 id="types-of-coverage" onclick="toggleContent('content2')">Types of Coverage</h2>
+        <div id="content2" class="content">
+            <ul>
+                <li><strong>Liability Insurance:</strong> Covers damages to other people and property in an accident you cause.</li>
+                <li><strong>Collision Insurance:</strong> Covers damage to your vehicle after a collision, regardless of fault.</li>
+                <li><strong>Comprehensive Insurance:</strong> Covers non-collision-related incidents, such as theft, vandalism, or natural disasters.</li>
+                <li><strong>Uninsured/Underinsured Motorist Coverage:</strong> Protects you if you're in an accident with a driver who doesn't have enough insurance.</li>
+            </ul>
+        </div>
+
+        <h2 id="how-to-choose" onclick="toggleContent('content3')">How to Choose a Policy</h2>
+        <div id="content3" class="content">
+            <p>When selecting a car insurance policy, consider the following:</p>
+            <ul>
+                <li>Evaluate your coverage needs based on your vehicle, driving habits, and budget.</li>
+                <li>Compare quotes from multiple insurance providers to find the best rates.</li>
+                <li>Read customer reviews and check the insurer's financial stability.</li>
+                <li>Ask about discounts for safe driving, bundling policies, or other factors.</li>
+            </ul>
+        </div>
+
+        <h2 id="faq" onclick="toggleContent('content4')">Frequently Asked Questions</h2>
+        <div id="content4" class="content">
+            <h3>Do I need car insurance?</h3>
+            <p>Yes, in most states, car insurance is a legal requirement to protect yourself and others on the road.</p>
+
+            <h3>How can I lower my car insurance premiums?</h3>
+            <p>Consider increasing your deductible, maintaining a good driving record, and taking advantage of available discounts.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Car Insurance Info. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
